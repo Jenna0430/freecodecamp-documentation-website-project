@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: justify;
 }
 /* navigation styles */
 .nav-header{
@@ -41,4 +42,46 @@
 .green-span{
   font-weight: lighter;
   color: rgb(18, 228, 18);
+}
+
+/* main section styles */
+.main-section{
+  padding: 15px;
+  margin-left: 20px;
+}
+.main-section h2{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+.main-section p{
+  font-size: 18px;
+  line-height: 30px;
+}
+.os-types li{
+  display: inline-block;
+  padding: 15px;
+  border: 2px solid gray;
+  margin: 5px;
+}
+.os-types li a{
+  text-decoration: none;
+  color: black;
+}
+.os-types li a:hover{
+  color: blue;
+}
+
+.left{
+  margin-left: 30px;
+}
+
+.code{
+  background-color: rgba(119, 118, 118, 0.3);
+  display: block;
+  white-space: pre-line;
+  line-height: 1.3rem;
+}
+h3{
+  font-size: 22px;
+  padding: 5px;
 }

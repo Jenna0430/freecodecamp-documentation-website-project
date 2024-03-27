@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Technical Documentation</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -35,7 +36,7 @@
         <h2>Getting Started</h2>
         <p>Choose your development platform to get started</p>
       </header>
-      <ul>
+      <ul class="os-types">
         <li><a href="">Windows</a></li>
         <li><a href="">MacOS</a></li>
         <li><a href="">Linux</a></li>
@@ -46,7 +47,7 @@
       <header>
         <h2>Create your sample Flutter app</h2>
       </header>
-      <ol>
+      <ol class="left">
         <li><p>Open the Command Palette.</p></li>
         <p>Go to View > Command Palette or press + Shift + P.</p>
         <li><p>Type <span class="green-span">flutter</span> </p></li>
@@ -65,7 +66,7 @@
         <h1>Run your sample Flutter app</h1>
       </header>
       <p>Run your example application on your desktop platform, in the Chrome web browser, in an iOS simulator, or Android emulator.</p>
-      <ol>
+      <ol class="left">
         <li><p>Open the Command Palette.</p></li>
         <p>Go to View > Command Palette or press + Shift + P.</p>
         <li><p>Type <span class="green-span">flutter</span></p></li>
@@ -81,22 +82,35 @@
     <section class="main-section" id="Layouts_in_Flutter">
       <header><h2>Layouts in Flutter</h2></header>
       <p>The core of Flutter’s layout mechanism is widgets. In Flutter, almost everything is a widget—even layout models are widgets. The images, icons, and text that you see in a Flutter app are all widgets. But things you don’t see are also widgets, such as the rows, columns, and grids that arrange, constrain, and align the visible widgets.</p>
+
       <h3>Create a visible widget</h3>
       <div class="code-section">
+
         <p>For example, create a Text widget:</p>
-        <code>
-          Text('Hello World'),
-        </code>
-        <p> Create an Image widget:</p>
-        <code>return Image.asset(
-          image,
-          fit: BoxFit.cover,
-        );</code>
-        <p>Create an Icon widget:</p>
-        <code>Icon(
-          Icons.star,
-          color: Colors.red[500],
-        ),</code>
+        <div class="code">
+          <code>
+            Text('Hello World'),
+          </code>
+        </div>
+
+          <p> Create an Image widget:</p>
+          <div class="code">
+            <code>return Image.asset(
+              image,
+              fit: BoxFit.cover,
+            );</code>
+          </div>
+          
+          <p>Create an Icon widget:</p>
+          <div class="code">
+            <code>Icon(
+              Icons.star,
+              color: Colors.red[500],
+            ),</code>
+          </div>
+         
+       
+        
       </div>
     </section>
 
@@ -105,24 +119,27 @@
       <h3>Create a ListView</h3>
       <p>Displaying lists of data is a fundamental pattern for mobile apps. Flutter includes the ListView widget to make working with lists a breeze.</p>
       <p>Using the standard ListView constructor is perfect for lists that contain only a few items. The built-in ListTile widget is a way to give items a visual structure.</p>
-      <code>
-        ListView(
-  children: const <Widget>[
-    ListTile(
-      leading: Icon(Icons.map),
-      title: Text('Map'),
-    ),
-    ListTile(
-      leading: Icon(Icons.photo_album),
-      title: Text('Album'),
-    ),
-    ListTile(
-      leading: Icon(Icons.phone),
-      title: Text('Phone'),
-    ),
-  ],
-),
-      </code>
+      <div class="code">
+        <code>
+          ListView(
+    children: const <Widget>[
+      ListTile(
+        leading: Icon(Icons.map),
+        title: Text('Map'),
+      ),
+      ListTile(
+        leading: Icon(Icons.photo_album),
+        title: Text('Album'),
+      ),
+      ListTile(
+        leading: Icon(Icons.phone),
+        title: Text('Phone'),
+      ),
+    ],
+  ),
+        </code>
+      </div>
+     
     </section>
     <section class="main-section" id="Create _and_style_a_text field">
       <header><h2>Create and style a text field</h2></header>
@@ -132,20 +149,26 @@
       <p>TextField is the most commonly used text input widget.
 
         By default, a TextField is decorated with an underline. You can add a label, icon, inline hint text, and error text by supplying an InputDecoration as the decoration property of the TextField. To remove the decoration entirely (including the underline and the space reserved for the label), set the decoration to null.</p>
-        <code>TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            hintText: 'Enter a search term',
-          ),
-        ),</code>
+        <div class="code">
+          <code>TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'Enter a search term',
+            ),
+          ),</code>
+        </div>
+       
         <h3>TextFormField</h3>
         <p>TextFormField wraps a TextField and integrates it with the enclosing Form. This provides additional functionality, such as validation and integration with other FormField widgets.</p>
-        <code>TextFormField(
-          decoration: const InputDecoration(
-            border: UnderlineInputBorder(),
-            labelText: 'Enter your username',
-          ),
-        ),</code>
+        <div class="code">
+          <code>TextFormField(
+            decoration: const InputDecoration(
+              border: UnderlineInputBorder(),
+              labelText: 'Enter your username',
+            ),
+          ),</code>
+        </div>
+       
     </section>
 
     <section class="main-section" id="Display_images_from_the_internet">
@@ -155,7 +178,11 @@
 
         To work with images from a URL, use the <span class="green-span">Image.network()</span> constructor.
       </p>
-      <code>Image.network('https://picsum.photos/250?image=9'),</code>
+
+      <div class="code">
+        <code>Image.network('https://picsum.photos/250?image=9'),</code>
+      </div>
+      
     </section>
 
     <section class="main-section" id="Flutter_fonts_and_typography">
@@ -174,7 +201,7 @@ A typeface is the collection of glyphs or shapes that comprise a given style of 
 Flutter lets you apply a custom font across an entire app or to individual widgets. This recipe creates an app that uses custom fonts with the following steps.
 </p>
 <p>Choose your fonts.</p>
-<ol>
+<ol class="left">
   <li><p>Import the font files.</p></li>
   <li><p>Declare the font in the pubspec.</p></li>
   <li><p>Set a font as the default.</p></li>
@@ -188,7 +215,7 @@ Flutter lets you apply a custom font across an entire app or to individual widge
       <header><h2>Export fonts from a package</h2></header>
       <p>Rather than declaring a font as part of an app, you can declare a font as part of a separate package. This is a convenient way to share the same font across several different projects, or for coders publishing their packages to pub.dev. This recipe uses the following steps:
 </p>
-<ol>
+<ol class="left">
   <li><p>Add a font to a package.</p></li>
   <li><p>Add the package and font to the app.</p></li>
   <li><p> Use the font.</p></li>
